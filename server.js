@@ -2,12 +2,12 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
 
-const Schema = './source/schema';
+const Schema = './source/schema/';
 const PORT = 3000;
 
-const app = express();
+const graphqlserver = express();
 
-app.use('/graphql', 
+graphqlserver.use('/graphql', 
         bodyParser.json(), 
         graphqlExpress({ 
           schema: Schema,
@@ -15,7 +15,7 @@ app.use('/graphql',
           tracing: true
         }));
 
-app.get('/graphiql', 
+graphqlserver.get('/graphiql', 
         graphiqlExpress({ endpointURL: '/graphql' })); 
 
-app.listen(PORT, () => {console.log(`server running on port ${PORT}, :ok_hand:`)});
+graphqlserver.listen(PORT, () => {console.log(`server running on port ${PORT}, :ok_hand:`)});
