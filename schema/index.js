@@ -9,3 +9,4 @@ type Query {
 const schema = makeExecutableSchema({ typeDefs });
 
 export default schema;
+
