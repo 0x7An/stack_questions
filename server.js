@@ -13,7 +13,7 @@ graphqlserver.use('/graphql',
         graphqlExpress({ 
           schema: Schema,
           cacheControl: true,
-          tracing: true
+          // tracing: true
         }));
 
 graphqlserver.get('/graphiql', 
