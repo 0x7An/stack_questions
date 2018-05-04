@@ -2,12 +2,13 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
 
-const Schema = './source/schema/';
+import Schema from './schema';
+
 const PORT = 3000;
 
 const graphqlserver = express();
 
-graphqlserver.use('/graphql', 
+graphqlserver.use('/graphql',
         bodyParser.json(), 
         graphqlExpress({ 
           schema: Schema,
