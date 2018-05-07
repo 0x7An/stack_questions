@@ -15,8 +15,7 @@ const resolvers = {
     }
 };
 
-function getQuestionsFromStack({tags, score = 1000, sort='activity', limit=10}) {
-    
+function getQuestionsFromStack({tags, score, sort, limit}) {
     let url_filter = `${URL}&score=${score}&sort=${sort}&limit=${limit}&tags=${tags}`;
 
     let resp = axios.get(url_filter)
