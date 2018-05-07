@@ -1,3 +1,5 @@
+Integração com a API do StackOverflow https://api.stackexchange.com/2.2/questions?
+
 ## Requirements
 
 * [node & npm](https://nodejs.org/en/)
@@ -5,6 +7,6 @@
 
 ## Running
 
-* `cd node-babel-server`
-* `npm install`
-* `npm start`
+* `cd stack_questions`
+* `yarn install`
+* `yarn start`
